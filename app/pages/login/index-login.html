@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hisabKitabLogin">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Hisab Kitab</title>
+
+    <!-- Core CSS -->
+    <link href="/app/build/build.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body ng-controller="loginController as userSecureData">
+    <header class="text-center">
+      <label class="logo text-center size-1x"><span class="first-part">Hisab</span>-Kitab</label>
+    </header>
+    <section class="container-fluid container-block space-top-size1x">
+      <form method="post" ng-submit="submitLoginForm()">
+        <article class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input type="email" class="form-control" ng-model="userSecureData.email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input type="text" class="form-control" ng-model="userSecureData.name" placeholder="Enter name" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" ng-model="userSecureData.password" placeholder="Password" required>
+            </div>
+            <div class="checkbox hidden">
+              <label>
+                <input type="checkbox"> Remember me
+              </label>
+            </div>
+            <button type="submit" class="btn btn-default width-full">Submit</button>
+          </div>
+        </article>
+      </form>
+    </section>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/app/assets/lib/jquery.min.js"></script>
+    <script src="/app/assets/lib/bootstrap.min.js"></script>
+    <script src="/app/assets/lib/angular.min.js"></script>
+    <script src="/app/config/login.js"></script>
+    <script src="/app/pages/login/loginController.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+  </body>
+</html>
